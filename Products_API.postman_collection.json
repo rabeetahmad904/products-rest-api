@@ -1,0 +1,27 @@
+{
+	"info": {
+		"name": "Products REST API Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"url": { "raw": "{{baseUrl}}/api/v1/products", "host": ["{{baseUrl}}"], "path": ["api", "v1", "products"] }
+			}
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [{ "key": "Content-Type", "value": "application/json" }],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Ultra HD Monitor\",\n  \"category\": \"Electronics\",\n  \"price\": 299.99,\n  \"stock\": 15\n}"
+				},
+				"url": { "raw": "{{baseUrl}}/api/v1/products", "host": ["{{baseUrl}}"], "path": ["api", "v1", "products"] }
+			}
+		}
+	]
+}
